@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Baza Filmov</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <img class="movie-pic" src="{{ movie.picture }}">
+    <p><span class="title-span">{{ movie.title }}</span></p>
+    <p class="description">{{ movie.description }}</p>
+    <p>Release date: {{ movie.release }}</p>
+    <p>Rating: {{ movie.rating }}</p>
+    <p>This movie was added: {{ movie.created.strftime("%d.%m.%Y") }}</p>
+    <a href="/"><button>Home</button></a>
+    <a href="/movie/{{ movie.key.id() }}/edit"><button>Edit</button></a>
+    <a href="/movie/{{ movie.key.id() }}/delete"><button>Delete</button></a>
+
+</body>
+</html>

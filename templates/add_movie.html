@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Baza Filmov</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Add new movie!</h1>
+
+    <form method="post" action="/movieadded">
+        <p><label>Title: </label>
+        <input class="m-title" name="title" placeholder="Movie title" required></p>
+        <p><label>Description: </label>
+        <textarea class="m-description" rows="7" name="description" placeholder="About movie" required></textarea></p>
+        <p><label>Release date: </label>
+        <input class="m-release" name="release" type="date" placeholder="Release date"></p>
+        <p><label>Picture: </label>
+        <input class="m-picture" name="picture" type="url" placeholder="Url to picture"></p>
+        <p><label>Rating: </label>
+        <input class="m-rating" name="rating" type="number" min="1" max="5" placeholder="Rating (1-5)"></p>
+        <button>OK</button>
+    </form>
+
+    <a href="/"><button>Home</button></a>
+
+</body>
+</html>

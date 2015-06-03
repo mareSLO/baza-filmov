@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Baza Filmov</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Edit movie details</h1>
+
+    <form method="post" action="/movie/{{ movie.key.id() }}/edit">
+        <p><label>Title: </label>
+        <input class="m-title" name="title2" value="{{ movie.title }}" required></p>
+        <p><label>Description: </label>
+        <textarea class="m-description" rows="7" name="description2" required>{{ movie.description }}</textarea></p>
+        <p><label>Release date: </label>
+        <input class="m-release" name="release2" value="{{ movie.release }}"></p>
+        <p><label>Picture: </label>
+        <input class="m-picture" name="picture2" value="{{ movie.picture }}"></p>
+        <p><label>Rating: </label>
+        <input class="m-rating" name="rating2" type="number" min="1" max="5" value="{{ movie.rating }}"></p>
+        <button>OK</button>
+    </form>
+
+    <a href="/"><button>Home</button></a>
+
+</body>
+</html>

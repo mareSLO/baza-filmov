@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Baza Filmov</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Do you really want to remove this movie from DB </h1>
+
+    <p>Title: <span class="title-span">{{ movie.title }}</span></p>
+
+    <form method="post" action="/movie/{{ movie.key.id() }}/delete">
+        <button>Yes</button>
+    </form>
+    <a href="/"><button>No</button></a>
+
+</body>
+</html>

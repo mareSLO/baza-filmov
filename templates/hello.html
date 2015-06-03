@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Baza Filmov</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Collection of Movies</h1>
+
+    <a href="/add"><button>Add</button></a>
+
+    {% for movie in movies %}
+        <p><a href="/movie/{{ movie.key.id() }}">{{ movie.title }}</a></p>
+    {% endfor %}
+
+</body>
+</html>
